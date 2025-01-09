@@ -11,3 +11,12 @@ searchBtn.addEventListener('click', () => {
         fetchMeals(query);
     }
 });
+async function fetchMeals(query) {
+    resultsContainer.innerHTML = '';
+    showAllBtn.style.display = 'none';
+    allMeals = [];
+
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
