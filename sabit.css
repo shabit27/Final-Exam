@@ -14,3 +14,17 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.meal-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.meal-card {
+    margin-bottom: 1.5rem;
+}
+
+#show-all {
+    display: none;
+}
