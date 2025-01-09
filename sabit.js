@@ -20,3 +20,13 @@ async function fetchMeals(query) {
     try {
         const response = await fetch(url);
         const data = await response.json();
+        if (data.meals) {
+            allMeals = data.meals;
+            displayMeals(allMeals.slice(0, 5));
+
+            if (allMeals.length > 5) {
+                showAllBtn.style.display = 'block';
+            }
+        } else {
+            resultsContainer.innerHTML = '<p class="text-center">No meals found.</p>';
+        }
