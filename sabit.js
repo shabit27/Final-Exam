@@ -50,3 +50,7 @@ function displayMeals(meals) {
         </div>
     `).join('');
 }
+showAllBtn.addEventListener('click', () => {
+    displayMeals(allMeals.slice(5));
+    showAllBtn.style.display = 'none';
+});
